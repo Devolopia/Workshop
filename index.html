@@ -1,7 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
 </head>
-  <body>
-  </body>
+<body>
+    <script type="text/javascript">
+            'use strict';
+            function showMessage(){
+                alert('Hello everyone!');
+            }
+            showMessage();
+            showMessage();
+            
+
+            let userName = 'John';
+            function showMessage() {
+            userName = "Bob"; // (1) changed the outer variable
+            let message = 'Hello, ' + userName;
+            alert(message);
+            }
+            alert( userName ); // John before the function call
+            showMessage();
+            alert( userName ); // Bob, the value was modified by the function
+
+            Default perameter
+            Not Default
+            function showMessage(from,text){
+                alert(from + " : " + text);
+            }
+            showMessage('Anu','Hello!');
+            Default
+            function showMessage(from,text='no text given'){
+                alert(from+ " " +text);
+            }
+            showMessage('Anu');
+
+            Return 
+            function sum(a,b){
+                return(a+b);
+            }
+            let res = sum(1,2);
+            alert(res);
+
+            function cage(age){
+                if(age>18){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            let age = prompt('How old are you?', 18);
+
+            if ( cage(age) ) {
+            alert( 'Access granted' );
+            } else {
+            alert( 'Access denied' );
+            }
+
+            
+    </script>
+</body>
 </html>
